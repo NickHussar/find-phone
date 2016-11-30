@@ -1,0 +1,7 @@
+class TabletsController < ApplicationController
+  def new
+  end
+
+  def create
+  end
+end

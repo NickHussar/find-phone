@@ -1,0 +1,17 @@
+<h1>New Article</h1>
+
+<%= form_for :phone, url: phones_path do |f| %>
+  <p>
+    <%= f.label :developer %><br>
+    <%= f.text_field :developer %>
+  </p>
+
+  <p>
+    <%= f.label :manufacturer %><br>
+    <%= f.text_field :manufacturer %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

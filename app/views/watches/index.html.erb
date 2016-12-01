@@ -1,0 +1,130 @@
+<h1>watches</h1>
+
+<table>
+  <tr>
+    <th>Developer</th>
+    <th>Manufacturer</th>
+    <th>Model</th>
+    <th>Description</th>
+    <th>Year</th>
+    <th>Resolution</th>
+    <th>Diagonal</th>
+    <th>Screen type</th>
+    <th>Color screen</th>
+    <th>DPI</th>
+    <th>Touchscreen</th>
+    <th>Multitouch</th>
+    <th>CPU</th>
+    <th>Cores</th>
+    <th>Frequency</th>
+    <th>GPU</th>
+    <th>Inner memory</th>
+    <th>Access memory</th>
+    <th>RAM</th>
+    <th>Camera</th>
+    <th>Megapixels</th>
+    <th>Photo resolution</th>
+    <th>Autofocus</th>
+    <th>Vdeo recording</th>
+    <th>Video resolution</th>
+    <th>FPS</th>
+    <th>Finder</th>
+    <th>Calls</th>
+    <th>E-mail</th>
+    <th>SMS</th>
+    <th>MMS</th>
+    <th>WiFi</th>
+    <th>Bluetooth</th>
+    <th>NFC</th>
+    <th>GPS</th>
+    <th>Gyroscope</th>
+    <th>Accelerometer</th>
+    <th>Barometer</th>
+    <th>Thermometer</th>
+    <th>Compass</th>
+    <th>Chrograph</th>
+    <th>Pedometer</th>
+    <th>Pulse sensor</th>
+    <th>Fitness tracker</th>
+    <th>Wireless charge</th>
+    <th>Fast charge</th>
+    <th>Battery</th>
+    <th>Standby time</th>
+    <th>Clock time</th>
+    <th>OS</th>
+    <th>Online service</th>
+    <th>Compatibility</th>
+    <th>Speaker</th>
+    <th>Microphone</th>
+    <th>Color</th>
+    <th>Weight</th>
+    <th>Dimensions</th>
+    <th>Material</th>
+    <th>Protection</th>
+  </tr>
+
+  <% @watches.each do |watch| %>
+    <tr>
+      <td><%= watch.developer %></td>
+      <td><%= watch.manufacturer %></td>
+      <td><%= watch.model %></td>
+      <td><%= watch.description %></td>
+      <td><%= watch.year %></td>
+      <td><%= watch.resolution %></td>
+      <td><%= watch.diagonal %></td>
+      <td><%= watch.color_screen %></td>
+      <td><%= watch.screen_type %></td>
+      <td><%= watch.dpi %></td>
+      <td><%= watch.touchscreen %></td>
+      <td><%= watch.multitouch %></td>
+      <td><%= watch.cpu %></td>
+      <td><%= watch.cores %></td>
+      <td><%= watch.frequency %></td>
+      <td><%= watch.gpu %></td>
+      <td><%= watch.inner_mem %></td>
+      <td><%= watch.access_mem %></td>
+      <td><%= watch.ram %></td>
+      <td><%= watch.cam %></td>
+      <td><%= watch.megapixels %></td>
+      <td><%= watch.photo_res %></td>
+      <td><%= watch.autofocus %></td>
+      <td><%= watch.video_rec %></td>
+      <td><%= watch.video_res %></td>
+      <td><%= watch.fps %></td>
+      <td><%= watch.finder %></td>
+      <td><%= watch.calls %></td>
+      <td><%= watch.email %></td>
+      <td><%= watch.sms %></td>
+      <td><%= watch.mms %></td>
+      <td><%= watch.wifi %></td>
+      <td><%= watch.bluetooth %></td>
+      <td><%= watch.nfc %></td>
+      <td><%= watch.gps %></td>
+      <td><%= watch.gyroscope %></td>
+      <td><%= watch.accelerometer %></td>
+      <td><%= watch.barometer %></td>
+      <td><%= watch.thermometer %></td>
+      <td><%= watch.compass %></td>
+      <td><%= watch.chronograph %></td>
+      <td><%= watch.pedometer %></td>
+      <td><%= watch.pulse_sensor %></td>
+      <td><%= watch.fitness_tracker %></td>
+      <td><%= watch.wireless_charge %></td>
+      <td><%= watch.fast_charge %></td>
+      <td><%= watch.battery %></td>
+      <td><%= watch.standby_time %></td>
+      <td><%= watch.clock_time %></td>
+      <td><%= watch.os %></td>
+      <td><%= watch.online_service %></td>
+      <td><%= watch.compatibility %></td>
+      <td><%= watch.speaker %></td>
+      <td><%= watch.microphone %></td>
+      <td><%= watch.color %></td>
+      <td><%= watch.weight %></td>
+      <td><%= watch.dimensions %></td>
+      <td><%= watch.material %></td>
+      <td><%= watch.protection %></td>
+      <td><%= link_to 'Show', watch_path(watch) %></td>
+    </tr>
+  <% end %>
+</table>

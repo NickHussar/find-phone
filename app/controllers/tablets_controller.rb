@@ -1,5 +1,9 @@
 class TabletsController < ApplicationController
 
+  def index
+    @tablets = Tablet.all
+  end
+
   def show
     @tablet = Tablet.find(params[:id])
   end

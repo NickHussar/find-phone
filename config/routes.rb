@@ -8,15 +8,21 @@ Rails.application.routes.draw do
 
   get 'developers/developers'
 
-  resources :watches
+  resources :watches do
+    resources :comments
+  end
 
   get 'watches/watches'
 
-  resources :tablets
+  resources :tablets do
+    resources :comments
+  end
 
   get 'tablets/tablets'
 
-  resources :phones
+  resources :phones do
+    resources :comments
+  end
 
   get 'phones/phones'
 

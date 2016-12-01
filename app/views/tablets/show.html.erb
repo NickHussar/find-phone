@@ -248,5 +248,20 @@
   <%= @tablet.protection %>
 </p>
 
+<h2>Add a comment:</h2>
+<%= form_for([@tablet, @tablet.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit', edit_tablet_path(@tablet) %>
 <%= link_to 'Back', tablets_path %>

@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130200937) do
+ActiveRecord::Schema.define(version: 20161201193828) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "commenter"
+    t.text     "body"
+    t.integer  "phone_id"
+    t.integer  "tablet_id"
+    t.integer  "watch_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["phone_id"], name: "index_comments_on_phone_id"
+    t.index ["tablet_id"], name: "index_comments_on_tablet_id"
+    t.index ["watch_id"], name: "index_comments_on_watch_id"
+  end
 
   create_table "developers", force: :cascade do |t|
     t.text     "name"

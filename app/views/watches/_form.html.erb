@@ -1,14 +1,13 @@
-<h1>New Article</h1>
+<%= form_for @watch do |f| %>
 
-<%= form_for :tablet, url: tablets_path do |f| %>
-
-  <% if @tablet.errors.any? %>
+  <% if @watch.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@tablet.errors.count, "error") %> prohibited this article from being saved:
+        <%= pluralize(@watch.errors.count, "error") %> prohibited
+        this watch from being saved:
       </h2>
       <ul>
-        <% @tablet.errors.full_messages.each do |msg| %>
+        <% @watch.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -56,8 +55,18 @@
   </p>
 
   <p>
+    <%= f.label :color_screen %><br>
+    <%= f.text_field :color_screen %>
+  </p>
+
+  <p>
     <%= f.label :dpi %><br>
     <%= f.text_field :dpi %>
+  </p>
+
+  <p>
+    <%= f.label :touchscreen %><br>
+    <%= f.text_field :touchscreen %>
   </p>
 
   <p>
@@ -116,13 +125,13 @@
   </p>
 
   <p>
-    <%= f.label :hdr %><br>
-    <%= f.text_field :hdr %>
+    <%= f.label :autofocus %><br>
+    <%= f.text_field :autofocus %>
   </p>
 
   <p>
-    <%= f.label :front_megapixels %><br>
-    <%= f.text_field :front_megapixels %>
+    <%= f.label :video_rec %><br>
+    <%= f.text_field :video_rec %>
   </p>
 
   <p>
@@ -136,13 +145,18 @@
   </p>
 
   <p>
-    <%= f.label :four_k_video %><br>
-    <%= f.text_field :four_k_video %>
+    <%= f.label :finder %><br>
+    <%= f.text_field :finder %>
   </p>
 
   <p>
     <%= f.label :calls %><br>
     <%= f.text_field :calls %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
   </p>
 
   <p>
@@ -153,16 +167,6 @@
   <p>
     <%= f.label :mms %><br>
     <%= f.text_field :mms %>
-  </p>
-
-  <p>
-    <%= f.label :three_g %><br>
-    <%= f.text_area :three_g %>
-  </p>
-
-  <p>
-    <%= f.label :four_g %><br>
-    <%= f.text_area :four_g %>
   </p>
 
   <p>
@@ -201,6 +205,36 @@
   </p>
 
   <p>
+    <%= f.label :thermometer %><br>
+    <%= f.text_field :thermometer %>
+  </p>
+
+  <p>
+    <%= f.label :compass %><br>
+    <%= f.text_field :compass %>
+  </p>
+
+  <p>
+    <%= f.label :chronograph %><br>
+    <%= f.text_field :chronograph %>
+  </p>
+
+  <p>
+    <%= f.label :pedometer %><br>
+    <%= f.text_field :pedometer %>
+  </p>
+
+  <p>
+    <%= f.label :pulse_sensor %><br>
+    <%= f.text_field :pulse_sensor %>
+  </p>
+
+  <p>
+    <%= f.label :fitness_tracker %><br>
+    <%= f.text_field :fitness_tracker %>
+  </p>
+
+  <p>
     <%= f.label :wireless_charge %><br>
     <%= f.text_field :wireless_charge %>
   </p>
@@ -208,16 +242,6 @@
   <p>
     <%= f.label :fast_charge %><br>
     <%= f.text_field :fast_charge %>
-  </p>
-
-  <p>
-    <%= f.label :stylus %><br>
-    <%= f.text_field :stylus %>
-  </p>
-
-  <p>
-    <%= f.label :keyboard %><br>
-    <%= f.text_field :keyboard %>
   </p>
 
   <p>
@@ -231,13 +255,33 @@
   </p>
 
   <p>
-    <%= f.label :talk_time %><br>
-    <%= f.text_field :talk_time %>
+    <%= f.label :clock_time %><br>
+    <%= f.text_field :clock_time %>
   </p>
 
   <p>
     <%= f.label :os %><br>
     <%= f.text_field :os %>
+  </p>
+
+  <p>
+    <%= f.label :online_service %><br>
+    <%= f.text_field :online_service %>
+  </p>
+
+  <p>
+    <%= f.label :compatibility %><br>
+    <%= f.text_area :compatibility %>
+  </p>
+
+  <p>
+    <%= f.label :speaker %><br>
+    <%= f.text_field :speaker %>
+  </p>
+
+  <p>
+    <%= f.label :mic %><br>
+    <%= f.text_field :mic %>
   </p>
 
   <p>
@@ -268,5 +312,5 @@
   <p>
     <%= f.submit %>
   </p>
-  
+
 <% end %>

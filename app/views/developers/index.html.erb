@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Description</th>
     <th>Devices</th>
+    <th colspan="3"></th>
   </tr>
 
   <% @developers.each do |developer| %>
@@ -13,6 +14,11 @@
       <td><%= developer.description %></td>
       <td><%= developer.devices %></td>
       <td><%= link_to 'Show', developer_path(developer) %></td>
+      <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+      <td><%= link_to 'Destroy', developer_path(developer),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
   <% end %>
 </table>

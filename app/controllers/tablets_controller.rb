@@ -9,13 +9,38 @@ class TabletsController < ApplicationController
   end
 
   def new
+    @tablet = Tablet.new
+  end
+
+  def edit
+    @tablet = Tablet.find(params[:id])
   end
 
   def create
     @tablet = Tablet.new(params[:tablet])
 
-    @tablet.save
-    redirect_to @tablet
+    if @tablet.save
+      redirect_to @tablet
+    else
+      render 'new'
+    end
+  end
+
+  def update
+    @tablet = Tablet.find(params[:id])
+
+    if @tablet.update(tablet_params)
+      redirect_to @tablet
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @tablet = Tablet.find(params[:id])
+    @tablet.destroy
+
+    redirect_to tablets_path
   end
 
   private

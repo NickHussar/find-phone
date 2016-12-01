@@ -1,14 +1,13 @@
-<h1>New Article</h1>
+<%= form_for @phone do |f| %>
 
-<%= form_for :tablet, url: tablets_path do |f| %>
-
-  <% if @tablet.errors.any? %>
+  <% if @phone.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@tablet.errors.count, "error") %> prohibited this article from being saved:
+        <%= pluralize(@phone.errors.count, "error") %> prohibited
+        this phone from being saved:
       </h2>
       <ul>
-        <% @tablet.errors.full_messages.each do |msg| %>
+        <% @phone.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -141,21 +140,6 @@
   </p>
 
   <p>
-    <%= f.label :calls %><br>
-    <%= f.text_field :calls %>
-  </p>
-
-  <p>
-    <%= f.label :sms %><br>
-    <%= f.text_field :sms %>
-  </p>
-
-  <p>
-    <%= f.label :mms %><br>
-    <%= f.text_field :mms %>
-  </p>
-
-  <p>
     <%= f.label :three_g %><br>
     <%= f.text_area :three_g %>
   </p>
@@ -211,13 +195,8 @@
   </p>
 
   <p>
-    <%= f.label :stylus %><br>
-    <%= f.text_field :stylus %>
-  </p>
-
-  <p>
-    <%= f.label :keyboard %><br>
-    <%= f.text_field :keyboard %>
+    <%= f.label :vr %><br>
+    <%= f.text_field :vr %>
   </p>
 
   <p>
@@ -268,5 +247,5 @@
   <p>
     <%= f.submit %>
   </p>
-  
+
 <% end %>

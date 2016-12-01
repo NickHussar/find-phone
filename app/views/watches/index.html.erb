@@ -61,6 +61,7 @@
     <th>Dimensions</th>
     <th>Material</th>
     <th>Protection</th>
+    <th colspan="3"></th>
   </tr>
 
   <% @watches.each do |watch| %>
@@ -125,6 +126,11 @@
       <td><%= watch.material %></td>
       <td><%= watch.protection %></td>
       <td><%= link_to 'Show', watch_path(watch) %></td>
+      <td><%= link_to 'Edit', edit_watch_path(watch) %></td>
+      <td><%= link_to 'Destroy', watch_path(watch),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
   <% end %>
 </table>

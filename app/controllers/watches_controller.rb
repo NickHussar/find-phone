@@ -9,13 +9,38 @@ class WatchesController < ApplicationController
   end
 
   def new
+    @watch = Watch.new
+  end
+
+  def edit
+    @watch = Watch.find(params[:id])
   end
 
   def create
     @watch = Watch.new(params[:watch])
 
-    @watch.save
-    redirect_to @watch
+    if @watch.save
+      redirect_to @watch
+    else
+      render 'new'
+    end
+  end
+
+  def update
+    @watch = Watch.find(params[:id])
+
+    if @watch.update(watch_params)
+      redirect_to @watch
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @watch = Watch.find(params[:id])
+    @watch.destroy
+
+    redirect_to watches_path
   end
 
   private

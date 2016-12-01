@@ -1,11 +1,10 @@
-<h1>New Article</h1>
-
-<%= form_for :tablet, url: tablets_path do |f| %>
+<%= form_for @tablet do |f| %>
 
   <% if @tablet.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@tablet.errors.count, "error") %> prohibited this article from being saved:
+        <%= pluralize(@tablet.errors.count, "error") %> prohibited
+        this tablet from being saved:
       </h2>
       <ul>
         <% @tablet.errors.full_messages.each do |msg| %>
@@ -268,5 +267,5 @@
   <p>
     <%= f.submit %>
   </p>
-  
+
 <% end %>

@@ -1,3 +1,119 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Global Tags
+
+$primary: #009688;
+$secondary: #FFA000;
+$secondary-2: #FF6F00;
+$secondary-3: #FF8F00;
+$bg: #EEEEEE;
+$gray: #757575;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background-color: #FF6F00;
+  color: #FFE57F;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  height: 100%;
+  cursor: default;
+  background-color: $bg;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  transition-duration: 0.2s;
+  border: 0;
+  outline: 0;
+  background: none;
+}
+
+// End Of Global Tags
+
+header {
+  position: absolute;
+  width: 100%;
+}
+
+nav {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  color: #FFF;
+  margin: 30px 0 0 10vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 280px;
+}
+
+nav a {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #FFF;
+  transition-duration: 0.2s;
+}
+
+nav a:hover {
+  border-bottom: 1px solid $secondary;
+}
+
+.img {
+  padding: 15vh 0 0 10vw;
+  background-image: asset-url("backgrounds/main.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  background-color: $primary;
+  height: 35vh;
+}
+
+.img figcaption {
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  color: #FFF;
+}
+
+.img p {
+  font-family: 'Open sans', sans-serif;
+  font-weight: normal;
+  color: #FFF;
+  width: 280px;
+}
+
+.img button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-top: 50px;
+  width: 200px;
+  height: 40px;
+  background-color: $secondary;
+  box-shadow: 0 3px 0 $secondary-2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.img button:hover {
+  background-color: $secondary-3;
+  box-shadow: 0 3px 0 $secondary-2;
+}
+
+footer {
+  background-color: $gray;
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+}

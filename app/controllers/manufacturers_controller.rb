@@ -5,7 +5,7 @@ class ManufacturersController < ApplicationController
   end
 
   def show
-    @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer = Manufacturer.find(params[:mn_id])
   end
 
   def new
@@ -13,7 +13,7 @@ class ManufacturersController < ApplicationController
   end
 
   def edit
-    @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer = Manufacturer.find(params[:mn_id])
   end
 
   def create
@@ -27,7 +27,7 @@ class ManufacturersController < ApplicationController
   end
 
   def update
-    @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer = Manufacturer.find(params[:mn_id])
 
     if @manufacturer.update(manufacturer_params)
       redirect_to @manufacturer
@@ -37,14 +37,14 @@ class ManufacturersController < ApplicationController
   end
 
   def destroy
-    @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer = Manufacturer.find(params[:mn_id])
     @manufacturer.destroy
 
     redirect_to manufacturers_path
   end
 
   private
-    def phone_params
-      params.require(:phone).permit(:name, :description, :devices)
+    def manufacturer_params
+      params.require(:manufacturer).permit(:mn_name, :mn_description, :mn_devices)
     end
 end

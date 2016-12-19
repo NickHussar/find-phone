@@ -5,7 +5,7 @@ class TabletsController < ApplicationController
   end
 
   def show
-    @tablet = Tablet.find(params[:id])
+    @tablet = Tablet.find(params[:tb_id])
   end
 
   def new
@@ -13,7 +13,7 @@ class TabletsController < ApplicationController
   end
 
   def edit
-    @tablet = Tablet.find(params[:id])
+    @tablet = Tablet.find(params[:tb_id])
   end
 
   def create
@@ -27,7 +27,7 @@ class TabletsController < ApplicationController
   end
 
   def update
-    @tablet = Tablet.find(params[:id])
+    @tablet = Tablet.find(params[:tb_id])
 
     if @tablet.update(tablet_params)
       redirect_to @tablet
@@ -37,7 +37,7 @@ class TabletsController < ApplicationController
   end
 
   def destroy
-    @tablet = Tablet.find(params[:id])
+    @tablet = Tablet.find(params[:tb_id])
     @tablet.destroy
 
     redirect_to tablets_path
@@ -45,6 +45,6 @@ class TabletsController < ApplicationController
 
   private
     def tablet_params
-      params.require(:tablet).permit(:developer, :manufacturer, :model, :description, :year, :resolution, :diagonal, :screen_type, :dpi, :multitouch, :cpu, :cores, :frequency, :gpu, :inner_mem, :access_mem, :ram, :cam, :megapixels, :photo_res, :hdr, :front_megapixels, :video_res, :fps, :four_k_video, :calls, :sms, :mms, :three_g, :four_g, :wifi, :bluetooth, :nfc, :gps, :gyroscope, :accelerometer, :barometer, :wireless_charge, :fast_charge, :stylus, :keyboard, :battery, :standby_time, :talk_time, :os, :color, :weight, :dimensions, :material, :protection)
+      params.require(:tablet).permit(:tb_developer, :tb_manufacturer, :tb_model, :tb_description, :tb_year, :tb_resolution, :tb_diagonal, :tb_screen_type, :tb_dpi, :tb_multitouch, :tb_cpu, :tb_cores, :tb_frequency, :tb_gpu, :tb_inner_mem, :tb_access_mem, :tb_ram, :tb_cam, :tb_megapixels, :tb_photo_res, :tb_hdr, :tb_front_megapixels, :tb_video_res, :tb_fps, :tb_four_k_video, :tb_calls, :tb_sms, :tb_mms, :tb_three_g, :tb_four_g, :tb_wifi, :tb_bluetooth, :tb_nfc, :tb_gps, :tb_gyroscope, :tb_accelerometer, :tb_barometer, :tb_wireless_charge, :tb_fast_charge, :tb_stylus, :tb_keyboard, :tb_battery, :tb_standby_time, :tb_talk_time, :tb_os, :tb_color, :tb_weight, :tb_dimensions, :tb_material, :tb_protection)
     end
 end

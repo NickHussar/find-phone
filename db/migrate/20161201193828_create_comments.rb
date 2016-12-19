@@ -3,8 +3,8 @@ class CreateComments < ActiveRecord::Migration[5.0]
     create_table :comments do |t|
       t.text :commenter
       t.text :body
-      t.references :phone, :tablet, :watch, foreign_key: true
-
+      t.integer :commentable_id
+      t.string :commentable_type
       t.timestamps
     end
   end

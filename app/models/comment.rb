@@ -1,3 +1,3 @@
 class Comment < ApplicationRecord
-  belongs_to :phone, :tablet, :watch
+  belongs_to :commentable, polymorphic: true
 end

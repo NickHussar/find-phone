@@ -5,7 +5,7 @@ class PhonesController < ApplicationController
   end
 
   def show
-    @phone = Phone.find(params[:id])
+    @phone = Phone.find(params[:ph_id])
   end
 
   def new
@@ -13,7 +13,7 @@ class PhonesController < ApplicationController
   end
 
   def edit
-    @phone = Phone.find(params[:id])
+    @phone = Phone.find(params[:ph_id])
   end
 
   def create
@@ -27,7 +27,7 @@ class PhonesController < ApplicationController
   end
 
   def update
-    @phone = Phone.find(params[:id])
+    @phone = Phone.find(params[:ph_id])
 
     if @phone.update(phone_params)
       redirect_to @phone
@@ -37,7 +37,7 @@ class PhonesController < ApplicationController
   end
 
   def destroy
-    @phone = Phone.find(params[:id])
+    @phone = Phone.find(params[:ph_id])
     @phone.destroy
 
     redirect_to phones_path
@@ -45,6 +45,6 @@ class PhonesController < ApplicationController
 
   private
     def phone_params
-      params.require(:phone).permit(:developer, :manufacturer, :model, :description, :year, :resolution, :diagonal, :screen_type, :dpi, :multitouch, :cpu, :cores, :frequency, :gpu, :inner_mem, :access_mem, :ram, :cam, :megapixels, :photo_res, :hdr, :front_megapixels, :video_res, :fps, :four_k_video, :three_g, :four_g, :wifi, :bluetooth, :nfc, :gps, :gyroscope, :accelerometer, :barometer, :wireless_charge, :fast_charge, :vr, :battery, :standby_time, :talk_time, :os, :color, :weight, :dimensions, :material, :protection)
+      params.require(:phone).permit(:ph_developer, :ph_manufacturer, :ph_model, :ph_description, :ph_year, :ph_resolution, :ph_diagonal, :ph_screen_type, :ph_dpi, :ph_multitouch, :ph_cpu, :ph_cores, :ph_frequency, :ph_gpu, :ph_inner_mem, :ph_access_mem, :ph_ram, :ph_cam, :ph_megapixels, :ph_photo_res, :ph_hdr, :ph_front_megapixels, :ph_video_res, :ph_fps, :ph_four_k_video, :ph_three_g, :ph_four_g, :ph_wifi, :ph_bluetooth, :ph_nfc, :ph_gps, :ph_gyroscope, :ph_accelerometer, :ph_barometer, :ph_wireless_charge, :ph_fast_charge, :ph_vr, :ph_battery, :ph_standby_time, :ph_talk_time, :ph_os, :ph_color, :ph_weight, :ph_dimensions, :ph_material, :ph_protection)
     end
 end

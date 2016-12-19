@@ -5,7 +5,7 @@ class DevelopersController < ApplicationController
   end
 
   def show
-    @developer = Developer.find(params[:id])
+    @developer = Developer.find(params[:dv_id])
   end
 
   def new
@@ -13,7 +13,7 @@ class DevelopersController < ApplicationController
   end
 
   def edit
-    @developer = Developer.find(params[:id])
+    @developer = Developer.find(params[:dv_id])
   end
 
   def create
@@ -27,7 +27,7 @@ class DevelopersController < ApplicationController
   end
 
   def update
-    @developer = Developer.find(params[:id])
+    @developer = Developer.find(params[:dv_id])
 
     if @developer.update(developer_params)
       redirect_to @developer
@@ -37,14 +37,14 @@ class DevelopersController < ApplicationController
   end
 
   def destroy
-    @developer = Developer.find(params[:id])
+    @developer = Developer.find(params[:dv_id])
     @developer.destroy
 
     redirect_to developers_path
   end
 
   private
-    def phone_params
-      params.require(:phone).permit(:name, :description, :devices)
+    def developer_params
+      params.require(:developer).permit(:dv_name, :dv_description, :dv_devices)
     end
 end

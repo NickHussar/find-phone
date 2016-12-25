@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>FindPhone</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,900&amp;subset=cyrillic" rel="stylesheet">
+  </head>
   <body>
     <header>
       <nav>
@@ -13,17 +14,57 @@
       </nav>
     </header>
     <main>
-      <figure class="img">
+      <figure class="teal">
         <figcaption>FindPhone</figcaption>
         <p>The best site for finding your new phone & other devices</p>
-        <button>find phone</button>
+        <button class="find">find phone</button>
+      </figure>
+      <figure class="orange">
+        <p>Already have a good phone? Maybe you need this...</p>
       </figure>
       <figure class="blank">
-
+        <figcaption>Tablets</figcaption>
+        <p>dsadsads adsdsadsadsadsa dsadsadsadsa dsadsdsad sadsadsadsad</p>
+      </figure>
+      <figure class="blank">
+        <figcaption>Watches</figcaption>
+        <p></p>
       </figure>
     </main>
     <footer>
-
+      <section>
+        <h1>Pages</h1>
+        <%= link_to 'Phones', controller: 'phones'%>
+        <%= link_to 'Tablets', controller: 'tablets'%>
+        <%= link_to 'Watches', controller: 'watches'%>
+        <%= link_to 'Developers', controller: 'developers'%>
+        <%= link_to 'Manufacturers', controller: 'manufacturers'%>
+      </section>
+      <section>
+        <h1>Stay tuned</h1>
+        <%= link_to 'Facebook', controller: 'phones'%>
+        <%= link_to 'Twitter', controller: 'tablets'%>
+        <%= link_to 'VK', controller: 'watches'%>
+        <%= link_to 'Google+', controller: 'developers'%>
+        <%= link_to 'Apps', controller: 'manufacturers'%>
+      </section>
+      <section>
+        <h1>Information</h1>
+        <%= link_to 'Send feedback', controller: 'phones'%>
+        <%= link_to 'About', controller: 'tablets'%>
+        <%= link_to 'Help', controller: 'watches'%>
+        <%= link_to 'Terms', controller: 'developers'%>
+        <%= link_to 'Privacy', controller: 'manufacturers'%>
+      </section>
+      <section>
+        <h1>Other</h1>
+        <%= link_to 'Send feedback', controller: 'phones'%>
+        <%= link_to 'About', controller: 'tablets'%>
+        <%= link_to 'Help', controller: 'watches'%>
+        <%= link_to 'Terms', controller: 'developers'%>
+        <%= link_to 'Privacy', controller: 'manufacturers'%>
+      </section>
+      <p class="copyright"></p>
     </footer>
   </body>
 </html>

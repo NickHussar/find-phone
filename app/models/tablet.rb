@@ -1,5 +1,5 @@
 class Tablet < ApplicationRecord
   has_many :comments, as: :commentable
-  validates :developer, presence: true,
+  validates :tb_developer, presence: true,
                         length: { minimum: 3}
 end

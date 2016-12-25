@@ -1,3 +1,127 @@
-// Place all the styles related to the Phones controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Global Tags
+
+$primary: #009688;
+$secondary: #FFA000;
+$secondary-2: #FF6F00;
+$secondary-3: #FF8F00;
+$bg: #FAFAFA;
+$gray: #757575;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+*::selection {
+  background-color: #FF8F00;
+  color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition-duration: 0.1s;
+}
+
+body {
+  height: 100%;
+  cursor: default;
+  background-color: $bg;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  transition-duration: 0.1s;
+  border: 0;
+  outline: 0;
+  background: none;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+}
+
+.form_h {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 35px;
+  color: $secondary;
+  margin: 20px 0 10px 50px;
+}
+
+.form {
+  display: flex;
+  margin: 50px 0 0 50px;
+  flex-flow: column wrap;
+  height: 800px;
+  align-items: flex-start;
+}
+
+.form label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: $gray;
+  text-transform: uppercase;
+}
+
+.form input[type="text"] {
+  border-bottom: 2px solid $gray;
+  background: none !important;
+  padding: 5px 5px 5px 0;
+  transition-duration: 0.2s;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  width: 200px;
+  color: $gray;
+}
+
+.form input[type="text"]:focus {
+  border-bottom: 2px solid $secondary;
+}
+
+.form textarea {
+  border-bottom: 2px solid $gray;
+  background: none !important;
+  padding: 5px 5px 5px 0;
+  transition-duration: 0.2s;
+  margin-bottom: 20px;
+  color: $gray;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  width: 200px;
+  height: 100px;
+  resize: none;
+}
+
+.form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.form textarea:focus {
+  border-bottom: 2px solid $secondary;
+  outline: none;
+}
+
+.form input[type="submit"] {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  width: 200px;
+  height: 40px;
+  background-color: $secondary;
+  box-shadow: 0 3px 0 $secondary-2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+// End Of Global Tags

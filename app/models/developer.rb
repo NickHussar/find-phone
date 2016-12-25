@@ -1,4 +1,4 @@
 class Developer < ApplicationRecord
-  validates :name, presence: true,
+  validates :dv_name, presence: true,
                    length: { minimum: 3}
 end

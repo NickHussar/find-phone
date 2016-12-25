@@ -1,4 +1,4 @@
 class Manufacturer < ApplicationRecord
-  validates :name, presence: true,
+  validates :mn_name, presence: true,
                    length: { minimum: 3}
 end

@@ -4,22 +4,24 @@ $primary: #009688;
 $secondary: #FFA000;
 $secondary-2: #FF6F00;
 $secondary-3: #FF8F00;
-$bg: #EEEEEE;
+$bg: #FAFAFA;
 $gray: #757575;
 
 * {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 *::selection {
-  background-color: #FF6F00;
-  color: #FFE57F;
+  background-color: #FF8F00;
+  color: #FFF;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition-duration: 0.1s;
 }
 
 body {
@@ -33,18 +35,18 @@ li {
 }
 
 button {
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
   border: 0;
   outline: 0;
   background: none;
 }
 
-// End Of Global Tags
-
 header {
   position: absolute;
   width: 100%;
 }
+
+// End Of Global Tags
 
 nav {
   font-family: 'Roboto', sans-serif;
@@ -54,20 +56,19 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  width: 280px;
+  width: 260px;
 }
 
 nav a {
   padding-bottom: 5px;
   border-bottom: 1px solid #FFF;
-  transition-duration: 0.2s;
 }
 
 nav a:hover {
   border-bottom: 1px solid $secondary;
 }
 
-.img {
+.teal {
   padding: 15vh 0 0 10vw;
   background-image: asset-url("backgrounds/main.svg");
   background-repeat: no-repeat;
@@ -77,21 +78,22 @@ nav a:hover {
   height: 35vh;
 }
 
-.img figcaption {
+.teal figcaption {
   font-family: 'Roboto', sans-serif;
-  font-size: 60px;
+  font-size: 47px;
   font-weight: 900;
+  text-transform: uppercase;
   color: #FFF;
 }
 
-.img p {
+.teal p {
   font-family: 'Open sans', sans-serif;
   font-weight: normal;
   color: #FFF;
   width: 280px;
 }
 
-.img button {
+.find {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 20px;
@@ -106,14 +108,73 @@ nav a:hover {
   cursor: pointer;
 }
 
-.img button:hover {
+.find:hover {
   background-color: $secondary-3;
   box-shadow: 0 3px 0 $secondary-2;
 }
 
+.orange {
+  background-color: $secondary;
+  padding: 5vh 0;
+}
+
+.orange p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+}
+
+.blank {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 5vh auto;
+  width: 30vw;
+  height: 20vh;
+}
+
+.blank figcaption {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: $primary;
+}
+
+.blank p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: $gray;
+  width: 200px;
+}
+
 footer {
   background-color: $gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 400px;
-  bottom: 0;
+  height: 250px;
+}
+
+footer section {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #FFF;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 150px;
+  margin: 0 5vw;
+  width: auto;
+}
+
+footer section a:hover {
+  color: $secondary;
+}
+
+.copyright {
+
 }

@@ -17,7 +17,7 @@ class DevelopersController < ApplicationController
   end
 
   def create
-    @developer = Developer.new(params[:developer])
+    @developer = Developer.new(developer_params)
 
     if @developer.save
       redirect_to @developer
@@ -45,6 +45,6 @@ class DevelopersController < ApplicationController
 
   private
     def developer_params
-      params.require(:developer).permit(:dv_name, :dv_description, :dv_devices)
+      params.require(:developer).permit(:name, :description, :devices)
     end
 end
